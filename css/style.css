@@ -1,11 +1,11 @@
 /*
 Colors used:
-Primary Color (Blue): #05676e;
-Secondary Color (Green): #489c79;
+Primary Color (Blue): #1f363d;
+Secondary Color (Green): #9ec1a3;
 */
 
 body {
-    background-color: #white;
+    background-color: #fff;
     font-family: 'Dosis', sans-serif;
     font-size: 16px; /* Sets the font size to 16px */
     font-weight: 400; /* Sets the font weight to 400 */
@@ -34,8 +34,62 @@ body {
     font-size: 1.35em;
     font-weight: 400;
   }
-}
 
 img{
   width:100%
+}
+
+a {
+  color: #40798c;
+  text-decoration: none; /* No underlining */
+}
+  a:visited { /* visited link */
+  color: #356473;
+  }
+
+  a:active { /* selected link */
+  color: #85A9B5;
+  }
+
+  a:hover {
+  color: #2F5966;
+  text-decoration:
+  underline;
+  } /* Underlining when hovering over a link */
+
+  a:focus {
+  color: #2F5966;
+  text-decoration:
+  underline;
+}
+
+
+  .button {
+  display: inline-block; /* since the <a> tag is inline by default */
+  background-color: #CFE0C3;
+  color: #ffffff !important; /* needed to override the default link color */
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #CFE0C3; /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
+button:hover {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+}
+button:active{
+  color: inherit;
+}
+
+.button.contact {
+  background-color: transparent;
+  color: #A6C6AB !important;
+  text-transform: uppercase;
+  border: 2px solid #A6C6AB;
+}
+
+.button.contact:hover {
+  background-color: #CFE0C3;
+  color: #ffffff !important;
 }
