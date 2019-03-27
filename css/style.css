@@ -2,84 +2,122 @@
 Colors used:
 Primary Color (Blue): #1f363d;
 Secondary Color (Green): #9ec1a3;
+
+selector {
+  margin: 0 auto;
+  } /* No spacing to top and bottom and auto spacing to left and right
+display: block, inline-block, inline, none
+
+selector {
+  position: relative, absolute, fixed, static;
+}
+
+selector {
+  float: right, left, inherit, none;
+}
+
+selector {
+  width: 1200px or 80%; - height and width only works for display: inline-block and block
+} an element’s total width is defined as width + padding + border
+
+#work .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
+By using this ID, you’ll only apply styling to elements with both the work ID and the row class.
+
+ */
+
+}
 */
-
 body {
-    background-color: #fff;
-    font-family: 'Dosis', sans-serif;
-    font-size: 16px; /* Sets the font size to 16px */
-    font-weight: 400; /* Sets the font weight to 400 */
-    line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
-    color: #4a4a4a;
-  }
+  background-color: #fff;
+  font-family: 'Dosis', sans-serif;
+  font-size: 16px;
+  /* Sets the font size to 16px */
+  font-weight: 400;
+  /* Sets the font weight to 400 */
+  line-height: 1.6;
+  /* Sets the line-height to 1.6 * the font-size */
+  color: #4a4a4a;
+}
+* {
+  box-sizing: border-box;
+}
 
-  h1, h2, h3, h4 {
-    line-height: 1.4;
-  }
-  h1 {
-    font-size: 2.75em;
-    font-weight: 700;
-  }
+h1, h2, h3, h4 {
+  line-height: 1.4;
+}
 
-  h2 {
-    font-size: 2.25em;
-    font-weight: 700;
-  }
+h1 {
+  font-size: 2.75em;
+  font-weight: 700;
+}
 
-  h3 {
-    font-size: 1.75em;
-    font-weight: 400;
-  }
-  h4 {
-    font-size: 1.35em;
-    font-weight: 400;
-  }
+h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+}
 
-img{
-  width:100%
+h3 {
+  font-size: 1.75em;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.35em;
+  font-weight: 400;
+}
+
+img {
+  width: 100%;
 }
 
 a {
   color: #40798c;
-  text-decoration: none; /* No underlining */
+  text-decoration: none;
+  /* No underlining */
 }
-  a:visited { /* visited link */
+
+a:visited {
+  /* visited link */
   color: #356473;
-  }
-
-  a:active { /* selected link */
-  color: #85A9B5;
-  }
-
-  a:hover {
-  color: #2F5966;
-  text-decoration:
-  underline;
-  } /* Underlining when hovering over a link */
-
-  a:focus {
-  color: #2F5966;
-  text-decoration:
-  underline;
 }
 
+a:hover, focus {
+  color: #2F5966;
+  text-decoration: underline;
+}
 
-  .button {
-  display: inline-block; /* since the <a> tag is inline by default */
+a:active {
+  /* selected link */
+  color: #85A9B5;
+}
+
+header {
+  background-color: #B9CED5;
+  padding: 10px 5px;
+  /*margin: 10px;
+  border: 3px solid #4a4a4a;*/
+  text-align: center;
+  position: fixed;
+}
+
+.button {
+  display: inline-block;
+  /* since the <a> tag is inline by default */
   background-color: #CFE0C3;
-  color: #ffffff !important; /* needed to override the default link color */
+  color: #ffffff !important;
+  /* needed to override the default link color */
   font-weight: 600;
   padding: 10px;
   border-radius: 3px;
-  border-bottom: 2px solid #CFE0C3; /* width of the border, type, color */
+  border-bottom: 2px solid #CFE0C3;
+  /* width of the border, type, color */
   transition: 0.2s opacity;
 }
-button:hover {
-  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+
+.button:hover {
+  opacity: 0.8;
+  /* Reduces the opacity of the button to 80% */
   text-decoration: none;
-}
-button:active{
-  color: inherit;
 }
 
 .button.contact {
@@ -92,4 +130,59 @@ button:active{
 .button.contact:hover {
   background-color: #CFE0C3;
   color: #ffffff !important;
+}
+/* Layout styling */
+.container {
+  padding: 0 15px;
+}
+.container {
+  max-width: 1200px;
+}
+.row {
+  margin: 25px 0; /* 25px top and bottom, 0 left and right */
+}
+#hero h1 {
+  text-align: center; /* Centers text */
+}
+.logo {
+  max-width: 250px;
+}
+nav {
+  display:inline-block;
+  width: 100%
+  box-shadow: -1px 8px 5px 0px rgba(50, 50, 50, 0.44);
+}
+
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+}
+nav > ul > li {
+  display: inline-block;
+}
+nav > ul > li > a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+nav > ul > li > a:visited {
+  color: #356473;
+}
+nav > ul > li > a:active {
+  color: #85A9B5
+}
+nav > ul > li > a:hover, focus {
+  color: #2F5966;
+  text-decoration: underline;
+}
+main {
+  padding-top: 133px;
+}
+#hero {
+  background-color: #B9CED5;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+  /* margin: 10px;
+  border: 3px solid #4a4a4a;*/
 }
