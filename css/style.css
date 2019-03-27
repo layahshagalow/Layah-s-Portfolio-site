@@ -23,10 +23,14 @@ selector {
 #work .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
 By using this ID, you’ll only apply styling to elements with both the work ID and the row class.
 
- */
-
+* {
+  box-sizing: border-box;
 }
-*/
+ */
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #fff;
   font-family: 'Dosis', sans-serif;
@@ -38,22 +42,20 @@ body {
   /* Sets the line-height to 1.6 * the font-size */
   color: #4a4a4a;
 }
-* {
-  box-sizing: border-box;
-}
 
 h1, h2, h3, h4 {
+  /*font-family:*/
   line-height: 1.4;
 }
 
 h1 {
   font-size: 2.75em;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 h2 {
   font-size: 2.25em;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 h3 {
@@ -71,7 +73,7 @@ img {
 }
 
 a {
-  color: #40798c;
+  color: #356473;
   text-decoration: none;
   /* No underlining */
 }
@@ -81,23 +83,28 @@ a:visited {
   color: #356473;
 }
 
-a:hover, focus {
-  color: #2F5966;
+a:hover, a:focus {
+  color: #85A9B5;
   text-decoration: underline;
 }
 
 a:active {
   /* selected link */
-  color: #85A9B5;
+  color: #334D4A;
 }
 
 header {
   background-color: #B9CED5;
   padding: 10px 5px;
-  /*margin: 10px;
-  border: 3px solid #4a4a4a;*/
+  /* margin: 10px;
+  border: 3px solid #4a4a4a; */
   text-align: center;
   position: fixed;
+  box-shadow: -1px 8px 5px 0px rgba(50, 50, 50, 0.44);
+}
+
+#hero h1 span {
+  display: block;
 }
 
 .button {
@@ -131,53 +138,81 @@ header {
   background-color: #CFE0C3;
   color: #ffffff !important;
 }
+
 /* Layout styling */
 .container {
   padding: 0 15px;
 }
+
 .container {
   max-width: 1200px;
 }
+
 .row {
-  margin: 25px 0; /* 25px top and bottom, 0 left and right */
-}
-#hero h1 {
-  text-align: center; /* Centers text */
-}
-.logo {
-  max-width: 250px;
-}
-nav {
-  display:inline-block;
-  width: 100%
-  box-shadow: -1px 8px 5px 0px rgba(50, 50, 50, 0.44);
+  margin: 25px 0;
+  /* 25px top and bottom, 0 left and right */
 }
 
-nav > ul {
+#hero h1 {
+  text-align: center;
+  /* Centers text */
+}
+
+.logo {
+  max-width: 60px;
+}
+
+nav {
+  display: inline-block;
+  width: 100%;
+}
+
+nav>ul {
   list-style-type: none;
   padding: 0;
 }
-nav > ul > li {
+
+nav>ul>li {
   display: inline-block;
 }
-nav > ul > li > a {
-  padding: 0 15px;
+
+nav>ul>li>a {
+  padding: 0 10px;
   text-transform: uppercase;
   font-weight: 800;
 }
-nav > ul > li > a:visited {
+
+nav>ul>li>a:visited {
   color: #356473;
 }
-nav > ul > li > a:active {
+
+nav>ul>li>a:active {
   color: #85A9B5
 }
-nav > ul > li > a:hover, focus {
+
+nav>ul>li>a:hover, focus {
   color: #2F5966;
   text-decoration: underline;
 }
+
+.social>ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.fa-linkedin {
+  font-size: 2em;
+}
+
 main {
   padding-top: 133px;
 }
+
+.row {
+  margin: 25px 0;
+  /* 25px top and bottom, 0 left and right */
+}
+
 #hero {
   background-color: #B9CED5;
   padding: 20px 0;
