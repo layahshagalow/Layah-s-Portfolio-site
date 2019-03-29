@@ -54,7 +54,7 @@ Extra large screens of 1441px and up; for all larger screen sizes
 body {
   background-color: #fff;
   font-family: 'Dosis', sans-serif;
-  font-size: 16px;
+  font-size: 1em;
   /* Sets the font size to 16px */
   font-weight: 400;
   /* Sets the font weight to 400 */
