@@ -26,9 +26,29 @@ By using this ID, you’ll only apply styling to elements with both the work ID 
 * {
   box-sizing: border-box;
 }
+Small screens up to 640px; including most mobile screen sizes
+Medium screens up to 1024px; including large mobile and most tablets
+Large screen sizes up to 1440px; including large tablets and most laptops/desktops
+Extra large screens of 1441px and up; for all larger screen sizes
  */
 * {
   box-sizing: border-box;
+}
+
+@media only screen and (min-width: 640px) {
+  header {
+   text-align: unset;
+   padding: 20px 0 13px;
+ }
+ nav {
+   width: auto;
+   float: right;
+   margin-top: 4px;
+ }
+}
+@media only screen and (min-width: 1024px) {
+}
+@media only screen and (min-width: 1440px) {
 }
 
 body {
@@ -46,6 +66,7 @@ body {
 h1, h2, h3, h4 {
   /*font-family:*/
   line-height: 1.4;
+  font-family: 'Oswald', sans-serif;
 }
 
 h1 {
@@ -102,62 +123,6 @@ header {
   position: fixed;
   box-shadow: -1px 8px 5px 0px rgba(50, 50, 50, 0.44);
 }
-
-#hero h1 span {
-  display: block;
-}
-
-.button {
-  display: inline-block;
-  /* since the <a> tag is inline by default */
-  background-color: #CFE0C3;
-  color: #ffffff !important;
-  /* needed to override the default link color */
-  font-weight: 600;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid #CFE0C3;
-  /* width of the border, type, color */
-  transition: 0.2s opacity;
-}
-
-.button:hover {
-  opacity: 0.8;
-  /* Reduces the opacity of the button to 80% */
-  text-decoration: none;
-}
-
-.button.contact {
-  background-color: transparent;
-  color: #A6C6AB !important;
-  text-transform: uppercase;
-  border: 2px solid #A6C6AB;
-}
-
-.button.contact:hover {
-  background-color: #CFE0C3;
-  color: #ffffff !important;
-}
-
-/* Layout styling */
-.container {
-  padding: 0 15px;
-}
-
-.container {
-  max-width: 1200px;
-}
-
-.row {
-  margin: 25px 0;
-  /* 25px top and bottom, 0 left and right */
-}
-
-#hero h1 {
-  text-align: center;
-  /* Centers text */
-}
-
 .logo {
   max-width: 60px;
 }
@@ -187,30 +152,12 @@ nav>ul>li>a:visited {
 }
 
 nav>ul>li>a:active {
-  color: #85A9B5
+  color: #85A9B5;
 }
 
 nav>ul>li>a:hover, focus {
   color: #2F5966;
   text-decoration: underline;
-}
-
-.social>ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.fa-linkedin {
-  font-size: 2em;
-}
-
-main {
-  padding-top: 133px;
-}
-
-.row {
-  margin: 25px 0;
-  /* 25px top and bottom, 0 left and right */
 }
 
 #hero {
@@ -220,4 +167,70 @@ main {
   width: 100%;
   /* margin: 10px;
   border: 3px solid #4a4a4a;*/
+}
+
+#hero h1 {
+  text-align: center;
+  /* Centers text */
+}
+#hero h1 span {
+  display: block;
+}
+
+main {
+  padding-top: 133px;
+}
+
+
+/* Layout styling */
+.container {
+  padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  margin: 25px 0;
+  /* 25px top and bottom, 0 left and right */
+}
+
+.button {
+  display: inline-block;
+  /* since the <a> tag is inline by default */
+  background-color: #CFE0C3;
+  color: #ffffff !important;
+  /* needed to override the default link color */
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #334D4A;
+  /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
+
+.button:hover {
+  opacity: 0.8;
+  /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+}
+
+.button.contact {
+  background-color: transparent;
+  color: #A6C6AB !important;
+  text-transform: uppercase;
+  border: 2px solid #A6C6AB;
+}
+
+.button.contact:hover {
+  background-color: #CFE0C3;
+  color: #ffffff !important;
+}
+
+.social>ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.fa-linkedin {
+  font-size: 2em;
 }
