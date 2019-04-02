@@ -30,25 +30,15 @@ Small screens up to 640px; including most mobile screen sizes
 Medium screens up to 1024px; including large mobile and most tablets
 Large screen sizes up to 1440px; including large tablets and most laptops/desktops
 Extra large screens of 1441px and up; for all larger screen sizes
+
+Transition states -
+transition-property:
+transition-duration:
+transition-timing-function:
+transition-delay:
  */
 * {
   box-sizing: border-box;
-}
-
-@media only screen and (min-width: 640px) {
-  header {
-   text-align: unset;
-   padding: 20px 0 13px;
- }
- nav {
-   width: auto;
-   float: right;
-   margin-top: 4px;
- }
-}
-@media only screen and (min-width: 1024px) {
-}
-@media only screen and (min-width: 1440px) {
 }
 
 body {
@@ -122,9 +112,10 @@ header {
   text-align: center;
   position: fixed;
   box-shadow: -1px 8px 5px 0px rgba(50, 50, 50, 0.44);
+  width: 100%
 }
 .logo {
-  max-width: 60px;
+  max-width: 35px;
 }
 
 nav {
@@ -171,14 +162,13 @@ nav>ul>li>a:hover, focus {
 
 #hero h1 {
   text-align: center;
-  /* Centers text */
 }
 #hero h1 span {
   display: block;
 }
 
 main {
-  padding-top: 133px;
+  padding-top: 99px;
 }
 
 
@@ -186,7 +176,12 @@ main {
 .container {
   padding: 0 15px;
   max-width: 1200px;
-  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .row {
@@ -233,4 +228,37 @@ main {
 
 .fa-linkedin {
   font-size: 2em;
+}
+
+@media only screen and (min-width: 640px) {
+  header {
+   text-align: unset;
+   padding: 20px 0 13px;
+ }
+ nav {
+   width: auto;
+   float: right;
+   margin-top: 4px;
+ }
+ .col-md-6 {
+  width: 50%;
+}
+class*="col-" {
+  float: left;
+  padding: 10px
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+}
+@media only screen and (min-width: 1024px) {
+}
+@media only screen and (min-width: 1440px) {
+  .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 }
