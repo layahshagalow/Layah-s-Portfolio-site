@@ -177,24 +177,19 @@ main {
 }
 */
 footer {
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   padding: 20px 0px 10px 0px;
 }
 footer a {
-  color:#fff;
-}
-
-/* Layout styling */
-.container {
-  padding: 0 15px;
-  max-width: 1200px;
+  color:#2F5966;
 }
 
 .container {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 15px;
 }
 
 .row {
@@ -254,7 +249,7 @@ footer a {
   0% {fill: #edc655;}
   50% {fill: #fcffad;}
   100% {fill: #f76414;}
-}
+} /* for sun animantion*/
 @keyframes cloud-move {
   from {transform: translate(0,50px);}
   to {transform: translate(200px,50px);}
@@ -285,8 +280,9 @@ footer a {
  }
 
  main {
-   padding: 94px;
+   padding-top: 94px;
  }
+ 
  .col-md-6 {
   width: 50%;
 }
@@ -304,11 +300,6 @@ footer a {
 
 }
 @media only screen and (min-width: 1440px) {
-  .container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
   .col-lg-7 {
     width: 58.33%;
   }
