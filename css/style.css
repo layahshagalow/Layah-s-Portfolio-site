@@ -109,13 +109,13 @@ header {
   padding: 10px 5px;
   /* margin: 10px;
   border: 3px solid #4a4a4a; */
-  text-align: center;
+  /*text-align:*/
   position: fixed;
   box-shadow: -1px 8px 5px 0px rgba(50, 50, 50, 0.44);
   width: 100%;
 }
 .logo {
-  max-width: 35px;
+  max-width: 54px;
 }
 
 nav {
@@ -126,10 +126,6 @@ nav {
 nav>ul {
   list-style-type: none;
   padding: 0;
-}
-
-nav>ul>li {
-  display: inline-block;
 }
 
 nav>ul>li>a {
@@ -149,6 +145,20 @@ nav>ul>li>a:active {
 nav>ul>li>a:hover, focus {
   color: #2F5966;
   text-decoration: underline;
+}
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0;
 }
 
 #hero {
@@ -289,9 +299,41 @@ footer .button {
    margin-top: 4px;
  }
 
+
  main {
    padding-top: 94px;
  }
+
+ nav > ul {
+  margin: 1em 0;
+}
+
+ nav>ul>li {
+   display: inline-block;
+ }
+
+ .navtoggle.responsive li  {
+   display: block;
+ }
+
+ .navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+.navtoggle li:last-child {
+  display: none;
+}
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,127,80,0.5);
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
 
  .col-md-6 {
   width: 50%;
